@@ -1,3 +1,8 @@
+/**
+ * @jest-environment jsdom
+ */
+
+
 import definePosition from '../definePosition';
 import createCells from '../cells';
 
@@ -17,7 +22,7 @@ expect.extend({
   },
 });
 
-test('whether function define new position of goblin', () => {
+test('new position of goblin', () => {
   const field = createCells(2);
   const body = document.querySelector('body');
   body.append(field);
